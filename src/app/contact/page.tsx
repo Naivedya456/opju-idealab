@@ -37,7 +37,7 @@ export default function ContactPage() {
                                         <Phone className="h-6 w-6 text-primary-orange" aria-hidden="true" />
                                     </dt>
                                     <dd>
-                                        <a href="tel:+911234567890" className="hover:text-primary-blue">+91 12345 67890</a>
+                                        <a href="tel:+917008001521" className="hover:text-primary-blue">+91 7008001521</a>
                                     </dd>
                                 </div>
                                 <div className="flex gap-4">

@@ -1,3 +1,11 @@
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | Empowering Innovators",
+  description: "Welcome to OPJU AICTE IDEA LAB. Discover our facilities, student projects, upcoming workshops, and innovation ecosystem.",
+};
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";

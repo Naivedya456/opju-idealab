@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* OPJU Brand Colors */
+  --color-primary-blue: #003898;
+  --color-primary-orange: #F16136;
+  --color-secondary-red: #B71A34;
+  --color-secondary-gold: #FFC107;
+  --color-dark-charcoal: #343A40;
+  --color-footer-bg: #222222;
+
+  /* Neutrals */
+  --color-foreground: #343A40;
+  --color-background: #FFFFFF;
+  --color-muted: #F8F9FA;
+  --color-muted-foreground: #6C757D;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark Mode Variables - Muted versions of brand colors */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-foreground: #F8F9FA;
+    --color-background: #121212;
+    --color-muted: #212529;
+    --color-muted-foreground: #ADB5BD;
+    --color-primary-blue: #3366CC;
+    /* Lighter blue for dark mode */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Utility Utilities */
+@utility bg-opju-gradient {
+  background: linear-gradient(90deg, #003898 0%, #002a72 100%);
+}
+
+@utility text-opju-blue {
+  color: #003898;
+}
+
+@utility btn-orange {
+  @apply bg-primary-orange text-white hover:bg-orange-600 transition-colors uppercase font-bold tracking-wide;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
